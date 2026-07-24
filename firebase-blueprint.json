@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile document stored in Firestore",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "avatar": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "ShortLink": {
+      "title": "ShortLink",
+      "description": "Shortened link entity",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "shortCode": { "type": "string" },
+        "originalUrl": { "type": "string" },
+        "title": { "type": "string" },
+        "clicks": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["id", "shortCode", "originalUrl"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile collection"
+    },
+    "/links/{linkId}": {
+      "schema": "ShortLink",
+      "description": "Shortened links collection"
+    }
+  }
+}

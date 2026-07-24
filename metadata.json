@@ -1,0 +1,6 @@
+{
+  "name": "Shorten.it",
+  "description": "Ultra-modern URL Shortener & Analytics platform with link tracking, custom back-half alias editing, user profile settings, and detailed traffic analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
